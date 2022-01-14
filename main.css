@@ -1,0 +1,58 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --easing: cubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --ham-before: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
+    --ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
+    --ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+    --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
+}
+
+main{
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+section{
+    min-height: 80vh;
+}
+
+h1{
+    padding-top: 50px;
+    margin-bottom: 60px;
+}
+
+.invisible {
+    visibility: visible;
+    opacity: 0;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 20, 0, 1);
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+
+.elements-children{
+    visibility: inherit;
+    opacity: inherit;
+    transform: inherit;
+    transition: inherit;
+}
+
+.transition-de-100ms{ transition-delay: 50ms; }
+.transition-de-200ms{ transition-delay: 150ms; }
+.transition-de-300ms{ transition-delay: 200ms; }
+.transition-de-400ms{ transition-delay: 250ms; }
+.transition-de-500ms{ transition-delay: 300ms; }
+.transition-de-600ms{ transition-delay: 350ms; }
+
